@@ -2,7 +2,7 @@ public class Funcionario {
 
 	private String nome;
 	private String cpf;
-	private double salario;
+	protected double salario;//deixando o atributo como "protected" assim será visivel para as classes filhas
 	
 	public Funcionario(String nome, String cpf, double salario) {
 		this.nome = nome;
@@ -11,7 +11,7 @@ public class Funcionario {
 	}
 	
 	public double getBonificacao() {
-		return this.salario += this.salario * 0.1;
+		return this.salario * 0.1;
 	}
 
 	public String getNome() {

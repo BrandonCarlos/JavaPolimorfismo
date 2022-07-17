@@ -15,8 +15,10 @@ public class Gerente extends Funcionario {
 		}
 	}
 	
+	//Reescrita do método getBonificacao()  lá da classe mãe
 	public double getBonificacao() {
-		return this.getSalario();
+		//para chamar o atributo lá da classe mãe chamamos como = super.atributoSelecionado;
+		return super.salario;
 	}
 	
 	public void setSenha(int senha) {
