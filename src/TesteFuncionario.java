@@ -7,7 +7,5 @@ public class TesteFuncionario {
 		System.out.println(nico.getBonificacao()); 
 		System.out.println(nico.getSalario()); 
 		
-		nico.salario = 300.0;
-		
 	}
 }
