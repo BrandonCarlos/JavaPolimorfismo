@@ -1,5 +1,6 @@
 
 public class Administrador extends Funcionario implements Autenticavel {
+	private int senha;
 	
 	public Administrador(String nome, String cpf, double salario) {//Constructor com o SUPER sempre precisa estar com todos os
 		//atributos da "classe base" que no caso aqui é o FuncionarioAutenticavel que possui a "senha" e aqui adicionamos a senha ao Constructor
@@ -13,12 +14,16 @@ public class Administrador extends Funcionario implements Autenticavel {
 
 	@Override
 	public void setSenha(int senha) {
-		
+		this.senha = senha;
 	}
 
 	@Override
 	public boolean autentica(double senha) {
-		return false;
+		if (this.senha == senha) {// this.senha = senha do usuário == 2222
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 }
