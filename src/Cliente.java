@@ -1,13 +1,17 @@
+public class Cliente implements Autenticavel {
+	private int senha;
 
-public class Cliente extends FuncionarioAutenticavel {
-
-	public Cliente(String nome, String cpf, double salario, int senha) {
-		super(nome, cpf, salario, senha);
+	@Override
+	public void setSenha(int senha) {// para podermos setar a senha
+		this.senha = senha;
 	}
 
 	@Override
-	public double getBonificacao() {
-		return 0;
+	public boolean autentica(double senha) {
+		if (this.senha == senha) {// this.senha = senha do usuário == 2222
+			return true;
+		} else {
+			return false;
+		}
 	}
-
 }
